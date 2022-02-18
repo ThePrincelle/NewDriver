@@ -18,7 +18,7 @@ struct RideLive: View {
             Button("Stop") {
                 self.presentationMode.wrappedValue.dismiss()
             }.padding(.all)
-            MapView()
+            MapDisplay(ride: ride)
         }
     }
 }

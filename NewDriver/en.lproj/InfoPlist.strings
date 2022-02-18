@@ -8,3 +8,4 @@
 
 
 NSLocationWhenInUseUsageDescription = "We use your location to record your rides.";
+NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location to record your rides.";

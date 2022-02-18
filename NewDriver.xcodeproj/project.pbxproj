@@ -10,7 +10,8 @@
 		AB0AFDB427C03219007DA009 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0AFDB327C03219007DA009 /* Location.swift */; };
 		AB0AFDB827C032A0007DA009 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB20906627BBF9F600AC7C45 /* MapKit.framework */; };
 		AB0AFDBB27C032A2007DA009 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61CF7527BBFD87006D1A8A /* CloudKit.framework */; };
-		AB0AFDBE27C03440007DA009 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB0AFDBD27C03440007DA009 /* Info.plist */; };
+		AB0AFDC227C03637007DA009 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0AFDC127C03636007DA009 /* LocationManager.swift */; };
+		AB0AFDC527C03897007DA009 /* MKCoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0AFDC427C03897007DA009 /* MKCoordinateRegion.swift */; };
 		AB20905727BBF90D00AC7C45 /* NewDriverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB20905627BBF90D00AC7C45 /* NewDriverApp.swift */; };
 		AB20905927BBF90D00AC7C45 /* RidesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB20905827BBF90D00AC7C45 /* RidesList.swift */; };
 		AB20905B27BBF90F00AC7C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB20905A27BBF90F00AC7C45 /* Assets.xcassets */; };
@@ -23,13 +24,15 @@
 		AB97416D27C00D130010E1E7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB97416F27C00D130010E1E7 /* Localizable.strings */; };
 		AB97418327C016000010E1E7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97418227C016000010E1E7 /* Config.swift */; };
 		AB97418D27C01FD60010E1E7 /* RideLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97418C27C01FD60010E1E7 /* RideLive.swift */; };
-		AB97418F27C023F80010E1E7 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97418E27C023F80010E1E7 /* MapView.swift */; };
+		AB97418F27C023F80010E1E7 /* MapDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97418E27C023F80010E1E7 /* MapDisplay.swift */; };
 		AB97419627C025F90010E1E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB97419827C025F90010E1E7 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB0AFDB327C03219007DA009 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		AB0AFDBD27C03440007DA009 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB0AFDC127C03636007DA009 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		AB0AFDC427C03897007DA009 /* MKCoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegion.swift; sourceTree = "<group>"; };
 		AB20905327BBF90D00AC7C45 /* NewDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB20905627BBF90D00AC7C45 /* NewDriverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDriverApp.swift; sourceTree = "<group>"; };
 		AB20905827BBF90D00AC7C45 /* RidesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesList.swift; sourceTree = "<group>"; };
@@ -46,7 +49,7 @@
 		AB97418127C0126B0010E1E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB97418227C016000010E1E7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		AB97418C27C01FD60010E1E7 /* RideLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideLive.swift; sourceTree = "<group>"; };
-		AB97418E27C023F80010E1E7 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		AB97418E27C023F80010E1E7 /* MapDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDisplay.swift; sourceTree = "<group>"; };
 		AB97419727C025F90010E1E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AB97419927C026110010E1E7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +68,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB0AFDC027C0361E007DA009 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				AB0AFDC127C03636007DA009 /* LocationManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		AB0AFDC327C0387D007DA009 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AB0AFDC427C03897007DA009 /* MKCoordinateRegion.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AB1E304727BCE83500E8D465 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,13 +92,6 @@
 				AB97418C27C01FD60010E1E7 /* RideLive.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		AB1E304827BCE85300E8D465 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		AB20904A27BBF90D00AC7C45 = {
@@ -106,9 +118,10 @@
 				AB97419827C025F90010E1E7 /* InfoPlist.strings */,
 				AB97416F27C00D130010E1E7 /* Localizable.strings */,
 				AB97416727BFA2C30010E1E7 /* Components */,
-				AB1E304827BCE85300E8D465 /* Resources */,
 				AB1E304727BCE83500E8D465 /* Views */,
+				AB0AFDC327C0387D007DA009 /* Extensions */,
 				AB61CF7B27BC0480006D1A8A /* Model */,
+				AB0AFDC027C0361E007DA009 /* Location */,
 				AB97418427C0164E0010E1E7 /* Data */,
 				AB20906827BBFA5900AC7C45 /* NewDriver.entitlements */,
 				AB20905627BBF90D00AC7C45 /* NewDriverApp.swift */,
@@ -150,7 +163,7 @@
 			children = (
 				AB61CF7727BBFFE2006D1A8A /* RideRow.swift */,
 				AB97416827BFA2D30010E1E7 /* Progress.swift */,
-				AB97418E27C023F80010E1E7 /* MapView.swift */,
+				AB97418E27C023F80010E1E7 /* MapDisplay.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -229,7 +242,6 @@
 				AB97416D27C00D130010E1E7 /* Localizable.strings in Resources */,
 				AB20905E27BBF90F00AC7C45 /* Preview Assets.xcassets in Resources */,
 				AB20905B27BBF90F00AC7C45 /* Assets.xcassets in Resources */,
-				AB0AFDBE27C03440007DA009 /* Info.plist in Resources */,
 				AB97419627C025F90010E1E7 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,13 +256,15 @@
 				AB97416927BFA2D30010E1E7 /* Progress.swift in Sources */,
 				AB20905927BBF90D00AC7C45 /* RidesList.swift in Sources */,
 				AB0AFDB427C03219007DA009 /* Location.swift in Sources */,
+				AB0AFDC227C03637007DA009 /* LocationManager.swift in Sources */,
 				AB61CF7A27BC0003006D1A8A /* RideDetails.swift in Sources */,
 				AB97418327C016000010E1E7 /* Config.swift in Sources */,
 				AB97418D27C01FD60010E1E7 /* RideLive.swift in Sources */,
 				AB61CF7827BBFFE2006D1A8A /* RideRow.swift in Sources */,
-				AB97418F27C023F80010E1E7 /* MapView.swift in Sources */,
+				AB97418F27C023F80010E1E7 /* MapDisplay.swift in Sources */,
 				AB61CF7D27BC0493006D1A8A /* Ride.swift in Sources */,
 				AB20905727BBF90D00AC7C45 /* NewDriverApp.swift in Sources */,
+				AB0AFDC527C03897007DA009 /* MKCoordinateRegion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +425,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewDriver/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NewDriver;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to record your rides.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -446,6 +461,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewDriver/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NewDriver;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to record your rides.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
