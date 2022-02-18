@@ -9,7 +9,10 @@ import SwiftUI
 
 struct RidesList: View {
     var rides: [Ride]
+    //@EnvironmentObject var vm: RideStorage
     @State private var showDialog = false
+    @State private var showLive = false
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -23,6 +26,7 @@ struct RidesList: View {
                     }
                 }
                 .padding(.top, 15.0)
+                NavigationLink(destination: RideLive(ride: Ride()), isActive: $showLive) {}
             }
             .toolbar {
                 HStack{
@@ -44,7 +48,9 @@ struct RidesList: View {
                         isPresented: $showDialog,
                         titleVisibility: .visible
                     ) {
-                            Button(action: {print("Action 1")}) {
+                            Button(action: {
+                                showLive = true
+                            }) {
                                 Text(LocalizedStringKey("start_ride"))
                                 Image(systemName: "car")
                                     .resizable(resizingMode: .stretch)
@@ -60,7 +66,9 @@ struct RidesList: View {
                     } message: {
                         Text(LocalizedStringKey("auto_or_manual"))
                     }.contextMenu {
-                        Button(action: {print("Action 1")}) {
+                        Button(action: {
+                            showLive = true
+                        }) {
                             Text(LocalizedStringKey("start_ride"))
                             Image(systemName: "car")
                                 .resizable(resizingMode: .stretch)

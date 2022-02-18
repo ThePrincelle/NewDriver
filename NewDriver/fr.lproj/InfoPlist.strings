@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  NewDriver
+
+  Created by Maxime Princelle on 18/02/2022.
+  
+*/
+
+
+NSLocationWhenInUseUsageDescription = "Nous utilisons votre position pour enregistrer vos trajets.";

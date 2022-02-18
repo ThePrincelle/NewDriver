@@ -7,26 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0AFDB427C03219007DA009 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0AFDB327C03219007DA009 /* Location.swift */; };
+		AB0AFDB827C032A0007DA009 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB20906627BBF9F600AC7C45 /* MapKit.framework */; };
+		AB0AFDBB27C032A2007DA009 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61CF7527BBFD87006D1A8A /* CloudKit.framework */; };
+		AB0AFDBE27C03440007DA009 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB0AFDBD27C03440007DA009 /* Info.plist */; };
 		AB20905727BBF90D00AC7C45 /* NewDriverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB20905627BBF90D00AC7C45 /* NewDriverApp.swift */; };
 		AB20905927BBF90D00AC7C45 /* RidesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB20905827BBF90D00AC7C45 /* RidesList.swift */; };
 		AB20905B27BBF90F00AC7C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB20905A27BBF90F00AC7C45 /* Assets.xcassets */; };
 		AB20905E27BBF90F00AC7C45 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB20905D27BBF90F00AC7C45 /* Preview Assets.xcassets */; };
-		AB61CF7627BBFD87006D1A8A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61CF7527BBFD87006D1A8A /* CloudKit.framework */; };
 		AB61CF7827BBFFE2006D1A8A /* RideRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB61CF7727BBFFE2006D1A8A /* RideRow.swift */; };
 		AB61CF7A27BC0003006D1A8A /* RideDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB61CF7927BC0003006D1A8A /* RideDetails.swift */; };
 		AB61CF7D27BC0493006D1A8A /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB61CF7C27BC0493006D1A8A /* Ride.swift */; };
 		AB97416627BFA17D0010E1E7 /* GaugeProgressViewStyle in Frameworks */ = {isa = PBXBuildFile; productRef = AB97416527BFA17D0010E1E7 /* GaugeProgressViewStyle */; };
 		AB97416927BFA2D30010E1E7 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97416827BFA2D30010E1E7 /* Progress.swift */; };
 		AB97416D27C00D130010E1E7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB97416F27C00D130010E1E7 /* Localizable.strings */; };
+		AB97418327C016000010E1E7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97418227C016000010E1E7 /* Config.swift */; };
+		AB97418D27C01FD60010E1E7 /* RideLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97418C27C01FD60010E1E7 /* RideLive.swift */; };
+		AB97418F27C023F80010E1E7 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97418E27C023F80010E1E7 /* MapView.swift */; };
+		AB97419627C025F90010E1E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB97419827C025F90010E1E7 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB0AFDB327C03219007DA009 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		AB0AFDBD27C03440007DA009 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB20905327BBF90D00AC7C45 /* NewDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB20905627BBF90D00AC7C45 /* NewDriverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDriverApp.swift; sourceTree = "<group>"; };
 		AB20905827BBF90D00AC7C45 /* RidesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesList.swift; sourceTree = "<group>"; };
 		AB20905A27BBF90F00AC7C45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB20905D27BBF90F00AC7C45 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AB20906427BBF9F600AC7C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AB20906627BBF9F600AC7C45 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AB20906827BBFA5900AC7C45 /* NewDriver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NewDriver.entitlements; sourceTree = "<group>"; };
 		AB61CF7527BBFD87006D1A8A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -36,6 +44,11 @@
 		AB97416827BFA2D30010E1E7 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		AB97416E27C00D130010E1E7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB97418127C0126B0010E1E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AB97418227C016000010E1E7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		AB97418C27C01FD60010E1E7 /* RideLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideLive.swift; sourceTree = "<group>"; };
+		AB97418E27C023F80010E1E7 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		AB97419727C025F90010E1E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AB97419927C026110010E1E7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,8 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB0AFDBB27C032A2007DA009 /* CloudKit.framework in Frameworks */,
 				AB97416627BFA17D0010E1E7 /* GaugeProgressViewStyle in Frameworks */,
-				AB61CF7627BBFD87006D1A8A /* CloudKit.framework in Frameworks */,
+				AB0AFDB827C032A0007DA009 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +70,7 @@
 			children = (
 				AB20905827BBF90D00AC7C45 /* RidesList.swift */,
 				AB61CF7927BC0003006D1A8A /* RideDetails.swift */,
-				AB61CF7727BBFFE2006D1A8A /* RideRow.swift */,
+				AB97418C27C01FD60010E1E7 /* RideLive.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -88,16 +102,19 @@
 		AB20905527BBF90D00AC7C45 /* NewDriver */ = {
 			isa = PBXGroup;
 			children = (
+				AB0AFDBD27C03440007DA009 /* Info.plist */,
+				AB97419827C025F90010E1E7 /* InfoPlist.strings */,
 				AB97416F27C00D130010E1E7 /* Localizable.strings */,
 				AB97416727BFA2C30010E1E7 /* Components */,
 				AB1E304827BCE85300E8D465 /* Resources */,
 				AB1E304727BCE83500E8D465 /* Views */,
 				AB61CF7B27BC0480006D1A8A /* Model */,
+				AB97418427C0164E0010E1E7 /* Data */,
 				AB20906827BBFA5900AC7C45 /* NewDriver.entitlements */,
-				AB20906427BBF9F600AC7C45 /* Info.plist */,
 				AB20905627BBF90D00AC7C45 /* NewDriverApp.swift */,
 				AB20905A27BBF90F00AC7C45 /* Assets.xcassets */,
 				AB20905C27BBF90F00AC7C45 /* Preview Content */,
+				AB97418227C016000010E1E7 /* Config.swift */,
 			);
 			path = NewDriver;
 			sourceTree = "<group>";
@@ -123,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				AB61CF7C27BC0493006D1A8A /* Ride.swift */,
+				AB0AFDB327C03219007DA009 /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,9 +148,18 @@
 		AB97416727BFA2C30010E1E7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				AB61CF7727BBFFE2006D1A8A /* RideRow.swift */,
 				AB97416827BFA2D30010E1E7 /* Progress.swift */,
+				AB97418E27C023F80010E1E7 /* MapView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		AB97418427C0164E0010E1E7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +229,8 @@
 				AB97416D27C00D130010E1E7 /* Localizable.strings in Resources */,
 				AB20905E27BBF90F00AC7C45 /* Preview Assets.xcassets in Resources */,
 				AB20905B27BBF90F00AC7C45 /* Assets.xcassets in Resources */,
+				AB0AFDBE27C03440007DA009 /* Info.plist in Resources */,
+				AB97419627C025F90010E1E7 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,8 +243,12 @@
 			files = (
 				AB97416927BFA2D30010E1E7 /* Progress.swift in Sources */,
 				AB20905927BBF90D00AC7C45 /* RidesList.swift in Sources */,
+				AB0AFDB427C03219007DA009 /* Location.swift in Sources */,
 				AB61CF7A27BC0003006D1A8A /* RideDetails.swift in Sources */,
+				AB97418327C016000010E1E7 /* Config.swift in Sources */,
+				AB97418D27C01FD60010E1E7 /* RideLive.swift in Sources */,
 				AB61CF7827BBFFE2006D1A8A /* RideRow.swift in Sources */,
+				AB97418F27C023F80010E1E7 /* MapView.swift in Sources */,
 				AB61CF7D27BC0493006D1A8A /* Ride.swift in Sources */,
 				AB20905727BBF90D00AC7C45 /* NewDriverApp.swift in Sources */,
 			);
@@ -231,6 +264,15 @@
 				AB97418127C0126B0010E1E7 /* en */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		AB97419827C025F90010E1E7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB97419727C025F90010E1E7 /* en */,
+				AB97419927C026110010E1E7 /* fr */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

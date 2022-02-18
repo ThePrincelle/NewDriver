@@ -18,6 +18,8 @@ struct NewDriverApp: App {
     var body: some Scene {
         WindowGroup {
             RidesList(rides: rides)
+                //.environmentObject(RideStorage())
+            //TestData().environmentObject(RideStorage())
         }
     }
 }
