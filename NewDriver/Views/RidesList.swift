@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  RidesList.swift
 //  NewDriver
 //
 //  Created by Maxime Princelle on 15/02/2022.
@@ -40,34 +40,34 @@ struct RidesList: View {
                             .resizable(capInsets: EdgeInsets(top: 1.0, leading: 1.0, bottom: 1.0, trailing: 1.0))
                             .frame(width: 35.0, height: 35.0)
                     }.confirmationDialog(
-                        "Que souhaitez-vous faire ?",
+                        LocalizedStringKey("what_want_do"),
                         isPresented: $showDialog,
                         titleVisibility: .visible
                     ) {
                             Button(action: {print("Action 1")}) {
-                                Text("Démarrer un trajet")
+                                Text(LocalizedStringKey("start_ride"))
                                 Image(systemName: "car")
                                     .resizable(resizingMode: .stretch)
                                 .frame(width: 35, height: 35)
                             }
                             Button(action: {print("Action 2")}) {
-                                Text("Ajouter un trajet existant")
+                                Text(LocalizedStringKey("add_existing_ride"))
                                 Image(systemName: "note.text.badge.plus")
                                     .resizable(resizingMode: .stretch)
                                 .frame(width: 35, height: 35)
                             }
-                            Button("Annuler", role: .cancel) {}
+                            Button(LocalizedStringKey("cancel"), role: .cancel) {}
                     } message: {
-                        Text("Choisissez si vous voulez ajouter un trajet existant ou démarrer un nouveau trajet avec la localisation de votre appareil.")
+                        Text(LocalizedStringKey("auto_or_manual"))
                     }.contextMenu {
                         Button(action: {print("Action 1")}) {
-                            Text("Démarrer un trajet")
+                            Text(LocalizedStringKey("start_ride"))
                             Image(systemName: "car")
                                 .resizable(resizingMode: .stretch)
                             .frame(width: 35, height: 35)
                         }
                         Button(action: {print("Action 2")}) {
-                            Text("Ajouter un trajet existant")
+                            Text(LocalizedStringKey("add_existing_ride"))
                             Image(systemName: "note.text.badge.plus")
                                 .resizable(resizingMode: .stretch)
                             .frame(width: 35, height: 35)
@@ -75,7 +75,7 @@ struct RidesList: View {
                     }
                 }
             }
-            .navigationTitle("Trajets")
+            .navigationTitle(LocalizedStringKey("main_title"))
             .navigationBarTitleDisplayMode(.large)
         }
     }

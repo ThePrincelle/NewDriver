@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  NewDriver
+ 
+  (French)
+
+  Created by Maxime Princelle on 18/02/2022.
+  
+*/
+
+
+"main_title" = "Trajets";
+"what_want_do" = "Que souhaitez-vous faire ?";
+"auto_or_manual" = "Choisissez si vous voulez ajouter un trajet existant ou démarrer un nouveau trajet avec la localisation de votre appareil.";
+"start_ride" = "Démarrer un trajet";
+"add_existing_ride" = "Ajouter un trajet existant";
+"cancel" = "Annuler";
+

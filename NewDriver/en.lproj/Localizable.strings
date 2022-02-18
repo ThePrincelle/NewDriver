@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  NewDriver
+ 
+  (English)
+
+  Created by Maxime Princelle on 18/02/2022.
+  
+*/
+
+
+"main_title" = "Rides";
+"what_want_do" = "What do you want to do?";
+"auto_or_manual" = "Choose between adding an existing ride or start a new one with the help of your device position.";
+"start_ride" = "Start a ride";
+"add_existing_ride" = "Add an existing ride";
+"cancel" = "Cancel";
+
+

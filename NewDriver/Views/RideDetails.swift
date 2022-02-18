@@ -1,5 +1,5 @@
 //
-//  RidesList.swift
+//  RideDetails.swift
 //  NewDriver
 //
 //  Created by Maxime Princelle on 15/02/2022.
@@ -17,15 +17,18 @@ struct RideDetails: View {
     }()
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("\(ride.source) → \(ride.destination)")
-                .font(.title3)
+        VStack(alignment: .center) {
+            Text("\(ride.source)")
+                .font(.largeTitle)
+                .fontWeight(.medium)
+            Text("→ \(ride.destination)")
+                .font(.title)
                 .fontWeight(.medium)
             Text("\(ride.date, formatter: Self.stackDateFormat) • \(ride.distance.formatted()) • \(ride.duration.formatted())")
-                .font(.footnote)
+                .font(.body)
                 .fontWeight(.light)
+                .padding(.top, 1.0)
         }
-        .padding(.vertical, 4.0)
     }
 }
 

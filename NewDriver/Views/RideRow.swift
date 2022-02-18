@@ -1,5 +1,5 @@
 //
-//  RideListItem.swift
+//  RideRow.swift
 //  NewDriver
 //
 //  Created by Maxime Princelle on 15/02/2022.
