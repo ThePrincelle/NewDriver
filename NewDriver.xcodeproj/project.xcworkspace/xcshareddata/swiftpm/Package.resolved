@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "gaugeview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kkla320/GaugeView.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "34ddb3b21bac8121dd7a9133dfd87f6615b4b372"
+      }
+    }
+  ],
+  "version" : 2
+}

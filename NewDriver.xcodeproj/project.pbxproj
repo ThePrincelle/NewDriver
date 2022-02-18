@@ -8,17 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		AB20905727BBF90D00AC7C45 /* NewDriverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB20905627BBF90D00AC7C45 /* NewDriverApp.swift */; };
-		AB20905927BBF90D00AC7C45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB20905827BBF90D00AC7C45 /* ContentView.swift */; };
+		AB20905927BBF90D00AC7C45 /* RidesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB20905827BBF90D00AC7C45 /* RidesList.swift */; };
 		AB20905B27BBF90F00AC7C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB20905A27BBF90F00AC7C45 /* Assets.xcassets */; };
 		AB20905E27BBF90F00AC7C45 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB20905D27BBF90F00AC7C45 /* Preview Assets.xcassets */; };
+		AB61CF7627BBFD87006D1A8A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61CF7527BBFD87006D1A8A /* CloudKit.framework */; };
+		AB61CF7827BBFFE2006D1A8A /* RideRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB61CF7727BBFFE2006D1A8A /* RideRow.swift */; };
+		AB61CF7A27BC0003006D1A8A /* RideDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB61CF7927BC0003006D1A8A /* RideDetails.swift */; };
+		AB61CF7D27BC0493006D1A8A /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB61CF7C27BC0493006D1A8A /* Ride.swift */; };
+		AB97416627BFA17D0010E1E7 /* GaugeProgressViewStyle in Frameworks */ = {isa = PBXBuildFile; productRef = AB97416527BFA17D0010E1E7 /* GaugeProgressViewStyle */; };
+		AB97416927BFA2D30010E1E7 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97416827BFA2D30010E1E7 /* Progress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB20905327BBF90D00AC7C45 /* NewDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB20905627BBF90D00AC7C45 /* NewDriverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDriverApp.swift; sourceTree = "<group>"; };
-		AB20905827BBF90D00AC7C45 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AB20905827BBF90D00AC7C45 /* RidesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesList.swift; sourceTree = "<group>"; };
 		AB20905A27BBF90F00AC7C45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB20905D27BBF90F00AC7C45 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AB20906427BBF9F600AC7C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AB20906627BBF9F600AC7C45 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AB20906827BBFA5900AC7C45 /* NewDriver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NewDriver.entitlements; sourceTree = "<group>"; };
+		AB61CF7527BBFD87006D1A8A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		AB61CF7727BBFFE2006D1A8A /* RideRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRow.swift; sourceTree = "<group>"; };
+		AB61CF7927BC0003006D1A8A /* RideDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetails.swift; sourceTree = "<group>"; };
+		AB61CF7C27BC0493006D1A8A /* Ride.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
+		AB97416827BFA2D30010E1E7 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB97416627BFA17D0010E1E7 /* GaugeProgressViewStyle in Frameworks */,
+				AB61CF7627BBFD87006D1A8A /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB1E304727BCE83500E8D465 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB20905827BBF90D00AC7C45 /* RidesList.swift */,
+				AB61CF7927BC0003006D1A8A /* RideDetails.swift */,
+				AB61CF7727BBFFE2006D1A8A /* RideRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AB1E304827BCE85300E8D465 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		AB20904A27BBF90D00AC7C45 = {
 			isa = PBXGroup;
 			children = (
 				AB20905527BBF90D00AC7C45 /* NewDriver */,
 				AB20905427BBF90D00AC7C45 /* Products */,
+				AB20906527BBF9F600AC7C45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,8 +85,13 @@
 		AB20905527BBF90D00AC7C45 /* NewDriver */ = {
 			isa = PBXGroup;
 			children = (
+				AB97416727BFA2C30010E1E7 /* Components */,
+				AB1E304827BCE85300E8D465 /* Resources */,
+				AB1E304727BCE83500E8D465 /* Views */,
+				AB61CF7B27BC0480006D1A8A /* Model */,
+				AB20906827BBFA5900AC7C45 /* NewDriver.entitlements */,
+				AB20906427BBF9F600AC7C45 /* Info.plist */,
 				AB20905627BBF90D00AC7C45 /* NewDriverApp.swift */,
-				AB20905827BBF90D00AC7C45 /* ContentView.swift */,
 				AB20905A27BBF90F00AC7C45 /* Assets.xcassets */,
 				AB20905C27BBF90F00AC7C45 /* Preview Content */,
 			);
@@ -65,6 +104,31 @@
 				AB20905D27BBF90F00AC7C45 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AB20906527BBF9F600AC7C45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB61CF7527BBFD87006D1A8A /* CloudKit.framework */,
+				AB20906627BBF9F600AC7C45 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB61CF7B27BC0480006D1A8A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB61CF7C27BC0493006D1A8A /* Ride.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AB97416727BFA2C30010E1E7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AB97416827BFA2D30010E1E7 /* Progress.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +147,9 @@
 			dependencies = (
 			);
 			name = NewDriver;
+			packageProductDependencies = (
+				AB97416527BFA17D0010E1E7 /* GaugeProgressViewStyle */,
+			);
 			productName = NewDriver;
 			productReference = AB20905327BBF90D00AC7C45 /* NewDriver.app */;
 			productType = "com.apple.product-type.application";
@@ -95,7 +162,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					AB20905227BBF90D00AC7C45 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -108,9 +175,13 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				fr,
 				Base,
 			);
 			mainGroup = AB20904A27BBF90D00AC7C45;
+			packageReferences = (
+				AB97416427BFA17D0010E1E7 /* XCRemoteSwiftPackageReference "GaugeView" */,
+			);
 			productRefGroup = AB20905427BBF90D00AC7C45 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +208,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB20905927BBF90D00AC7C45 /* ContentView.swift in Sources */,
+				AB97416927BFA2D30010E1E7 /* Progress.swift in Sources */,
+				AB20905927BBF90D00AC7C45 /* RidesList.swift in Sources */,
+				AB61CF7A27BC0003006D1A8A /* RideDetails.swift in Sources */,
+				AB61CF7827BBFFE2006D1A8A /* RideRow.swift in Sources */,
+				AB61CF7D27BC0493006D1A8A /* Ride.swift in Sources */,
 				AB20905727BBF90D00AC7C45 /* NewDriverApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +224,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -210,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -266,15 +343,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NewDriver/NewDriver.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NewDriver/Preview Content\"";
 				DEVELOPMENT_TEAM = 37C4N5SWQ4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NewDriver/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NewDriver;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -284,9 +366,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.princelle.NewDriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -295,15 +378,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NewDriver/NewDriver.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NewDriver/Preview Content\"";
 				DEVELOPMENT_TEAM = 37C4N5SWQ4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NewDriver/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NewDriver;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -313,9 +401,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.princelle.NewDriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -341,6 +430,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB97416427BFA17D0010E1E7 /* XCRemoteSwiftPackageReference "GaugeView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kkla320/GaugeView.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB97416527BFA17D0010E1E7 /* GaugeProgressViewStyle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB97416427BFA17D0010E1E7 /* XCRemoteSwiftPackageReference "GaugeView" */;
+			productName = GaugeProgressViewStyle;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB20904B27BBF90D00AC7C45 /* Project object */;
 }
