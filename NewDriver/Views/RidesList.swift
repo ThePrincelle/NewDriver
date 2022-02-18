@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RidesList: View {
     var rides: [Ride]
-    
+    @State private var showDialog = false
     var body: some View {
         NavigationView {
             VStack {
@@ -29,22 +29,53 @@ struct RidesList: View {
                     Button(action: {
                         print("Button Share")
                     }) {
-                        Image(systemName: "square.and.arrow.up")
-                        .frame(width: 30, height: 30)
+                       Image(systemName: "square.and.arrow.up")
+                            .frame(width: 30, height: 30)
                     }
                     Spacer()
-                    Image(systemName: "plus.circle.fill")
-                        .frame(width: 30, height: 30)
-                        .contextMenu {
-                            /*@START_MENU_TOKEN@*/Text("Menu Item 1")/*@END_MENU_TOKEN@*/
-                            /*@START_MENU_TOKEN@*/Text("Menu Item 2")/*@END_MENU_TOKEN@*/
-                            /*@START_MENU_TOKEN@*/Text("Menu Item 3")/*@END_MENU_TOKEN@*/
-                        }.onTapGesture(perform: {
-                            print("Tap")
-                        })
+                    Button(action: {
+                        showDialog = true
+                    }) {
+                        Image(systemName: "plus.circle.fill")
+                            .resizable(capInsets: EdgeInsets(top: 1.0, leading: 1.0, bottom: 1.0, trailing: 1.0))
+                            .frame(width: 35.0, height: 35.0)
+                    }.confirmationDialog(
+                        "Que souhaitez-vous faire ?",
+                        isPresented: $showDialog,
+                        titleVisibility: .visible
+                    ) {
+                            Button(action: {print("Action 1")}) {
+                                Text("Démarrer un trajet")
+                                Image(systemName: "car")
+                                    .resizable(resizingMode: .stretch)
+                                .frame(width: 35, height: 35)
+                            }
+                            Button(action: {print("Action 2")}) {
+                                Text("Ajouter un trajet existant")
+                                Image(systemName: "note.text.badge.plus")
+                                    .resizable(resizingMode: .stretch)
+                                .frame(width: 35, height: 35)
+                            }
+                            Button("Annuler", role: .cancel) {}
+                    } message: {
+                        Text("Choisissez si vous voulez ajouter un trajet existant ou démarrer un nouveau trajet avec la localisation de votre appareil.")
+                    }.contextMenu {
+                        Button(action: {print("Action 1")}) {
+                            Text("Démarrer un trajet")
+                            Image(systemName: "car")
+                                .resizable(resizingMode: .stretch)
+                            .frame(width: 35, height: 35)
+                        }
+                        Button(action: {print("Action 2")}) {
+                            Text("Ajouter un trajet existant")
+                            Image(systemName: "note.text.badge.plus")
+                                .resizable(resizingMode: .stretch)
+                            .frame(width: 35, height: 35)
+                        }
+                    }
                 }
             }
-            .navigationTitle("Rides")
+            .navigationTitle("Trajets")
             .navigationBarTitleDisplayMode(.large)
         }
     }
@@ -64,30 +95,6 @@ struct RidesList_Previews: PreviewProvider {
                 Ride(source: "Mutzig", destination: "Strasbourg", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 20, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather"),
                 Ride(source: "Niederhaslach", destination: "Mutzig", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 35, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather")
             ])
-            RidesList(rides: [
-                Ride(source: "Strasbourg", destination: "Mutzig", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 22, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather"),
-                Ride(source: "Mutzig", destination: "Strasbourg", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 20, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather"),
-                Ride(source: "Niederhaslach", destination: "Mutzig", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 35, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather"),
-                Ride(source: "Strasbourg", destination: "Mutzig", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 22, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather"),
-                Ride(source: "Mutzig", destination: "Strasbourg", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 20, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather"),
-                Ride(source: "Niederhaslach", destination: "Mutzig", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 35, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather"),
-                Ride(source: "Strasbourg", destination: "Mutzig", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 22, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather"),
-                Ride(source: "Mutzig", destination: "Strasbourg", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 20, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather"),
-                Ride(source: "Niederhaslach", destination: "Mutzig", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 35, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather")
-            ])
-            .previewDevice("iPhone 12 mini")
-            RidesList(rides: [
-                Ride(source: "Strasbourg", destination: "Mutzig", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 22, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather"),
-                Ride(source: "Mutzig", destination: "Strasbourg", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 20, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather"),
-                Ride(source: "Niederhaslach", destination: "Mutzig", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 35, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather"),
-                Ride(source: "Strasbourg", destination: "Mutzig", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 22, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather"),
-                Ride(source: "Mutzig", destination: "Strasbourg", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 20, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather"),
-                Ride(source: "Niederhaslach", destination: "Mutzig", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 35, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather"),
-                Ride(source: "Strasbourg", destination: "Mutzig", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 22, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather"),
-                Ride(source: "Mutzig", destination: "Strasbourg", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 20, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather"),
-                Ride(source: "Niederhaslach", destination: "Mutzig", date: Date(), duration: Measurement.init(value: 12, unit: UnitDuration.minutes), distance: Measurement.init(value: 35, unit: UnitLength.kilometers), grade: 4, comment: "a small comment", roadType: "a roadtype", weather: "the weather")
-            ])
-            .previewDevice("iPhone 8")
         }
         
     }
