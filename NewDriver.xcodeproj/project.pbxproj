@@ -12,6 +12,7 @@
 		AB0AFDBB27C032A2007DA009 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61CF7527BBFD87006D1A8A /* CloudKit.framework */; };
 		AB0AFDC227C03637007DA009 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0AFDC127C03636007DA009 /* LocationManager.swift */; };
 		AB0AFDC527C03897007DA009 /* MKCoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0AFDC427C03897007DA009 /* MKCoordinateRegion.swift */; };
+		AB0AFDC927C13B3D007DA009 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0AFDC827C13B3D007DA009 /* StopWatch.swift */; };
 		AB20905727BBF90D00AC7C45 /* NewDriverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB20905627BBF90D00AC7C45 /* NewDriverApp.swift */; };
 		AB20905927BBF90D00AC7C45 /* RidesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB20905827BBF90D00AC7C45 /* RidesList.swift */; };
 		AB20905B27BBF90F00AC7C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB20905A27BBF90F00AC7C45 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		AB0AFDBD27C03440007DA009 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB0AFDC127C03636007DA009 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		AB0AFDC427C03897007DA009 /* MKCoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegion.swift; sourceTree = "<group>"; };
+		AB0AFDC827C13B3D007DA009 /* StopWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		AB20905327BBF90D00AC7C45 /* NewDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB20905627BBF90D00AC7C45 /* NewDriverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDriverApp.swift; sourceTree = "<group>"; };
 		AB20905827BBF90D00AC7C45 /* RidesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesList.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				AB61CF7727BBFFE2006D1A8A /* RideRow.swift */,
 				AB97416827BFA2D30010E1E7 /* Progress.swift */,
 				AB97418E27C023F80010E1E7 /* MapDisplay.swift */,
+				AB0AFDC827C13B3D007DA009 /* StopWatch.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				AB20905927BBF90D00AC7C45 /* RidesList.swift in Sources */,
 				AB0AFDB427C03219007DA009 /* Location.swift in Sources */,
 				AB0AFDC227C03637007DA009 /* LocationManager.swift in Sources */,
+				AB0AFDC927C13B3D007DA009 /* StopWatch.swift in Sources */,
 				AB61CF7A27BC0003006D1A8A /* RideDetails.swift in Sources */,
 				AB97418327C016000010E1E7 /* Config.swift in Sources */,
 				AB97418D27C01FD60010E1E7 /* RideLive.swift in Sources */,

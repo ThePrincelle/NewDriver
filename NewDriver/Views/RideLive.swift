@@ -7,19 +7,24 @@
 
 import SwiftUI
 
+
 struct RideLive: View {
+    @State var duration = Measurement.init(value: 0.0, unit: UnitDuration.seconds);
+    @Environment(\.presentationMode) var presentationMode;
+    
     @State var ride: Ride
-    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        VStack {
-            Text("Distance: \(ride.distance.formatted())")
-            Text("Duration: \(ride.duration.formatted())")
+        VStack(alignment: .leading) {
+            StopWatch()
+            Text("\(ride.distance.formatted())").font(.title)
+            
             Button("Stop") {
                 self.presentationMode.wrappedValue.dismiss()
             }.padding(.all)
             MapDisplay(ride: ride)
         }
+        .padding(2.0).edgesIgnoringSafeArea(.bottom)
     }
 }
 

@@ -17,6 +17,8 @@ struct MapDisplay: View {
     var ride: Ride;
     @State private var userTrackingMode: MapUserTrackingMode = .follow
     
+    @State var distance = Measurement.init(value: 0.0, unit: UnitLength.kilometers)
+    
     private func setCurrentLocation() {
         cancellable = locationManager.$location.sink { location in
             region = MKCoordinateRegion(
@@ -36,13 +38,24 @@ struct MapDisplay: View {
                     )
                 )
                 
-                ride.duration = ride.duration + Measurement.init(value: 1, unit: UnitDuration.seconds)
+                var previousLocation: CLLocation = CLLocation(latitude: 0.0, longitude: 0.0);
+                ride.trace?.forEach { loc in
+                    if (previousLocation.coordinate.latitude != 0.0) {
+                        let nextLocation = CLLocation(latitude: loc.lattitude, longitude: loc.longitude)
+                        let tempDistance = nextLocation.distance(from: nextLocation) / 1000
+                        distance = distance + Measurement.init(value: tempDistance, unit: UnitLength.kilometers)
+                        previousLocation = CLLocation(latitude: loc.lattitude, longitude: loc.longitude)
+                    }
+                }
+                
+                ride.updateDistanceWithTrace(trace: ride.trace ?? [])
             }
         }
     }
     
     var body: some View {
         VStack {
+            Text("\(ride.distance.formatted())")
             if locationManager.location != nil {
                 MapView(
                     region: region,
@@ -83,7 +96,6 @@ struct MapView: UIViewRepresentable {
   func makeCoordinator() -> Coordinator {
     Coordinator(self)
   }
-
 }
 
 class Coordinator: NSObject, MKMapViewDelegate {

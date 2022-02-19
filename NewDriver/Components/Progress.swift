@@ -48,8 +48,8 @@ func getEmoji(progress: Double) -> String {
     if (progress > 10) {
         emoji = "📈"
     }
-    if (progress < 5) {
-        emoji = "🙁"
+    if (progress < 2) {
+        emoji = "🧐"
     }
     return emoji
 }

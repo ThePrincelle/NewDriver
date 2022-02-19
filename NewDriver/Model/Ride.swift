@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class Ride: Identifiable {
     var id = UUID()
@@ -42,5 +43,21 @@ class Ride: Identifiable {
         self.roadType = ""
         self.weather = ""
         self.trace = []
+    }
+    
+    func addDuration(duration: Measurement<UnitDuration>) {
+        self.duration = self.duration + duration
+    }
+    
+    func updateDistanceWithTrace(trace: [Location]) {
+        var previousLocation: CLLocation = CLLocation(latitude: 0.0, longitude: 0.0);
+        trace.forEach { loc in
+            if (previousLocation.coordinate.latitude != 0.0) {
+                let nextLocation = CLLocation(latitude: loc.lattitude, longitude: loc.longitude)
+                let distance = nextLocation.distance(from: nextLocation) / 1000
+                self.distance = self.distance + Measurement.init(value: distance, unit: UnitLength.kilometers)
+                previousLocation = CLLocation(latitude: loc.lattitude, longitude: loc.longitude)
+            }
+        }
     }
 }
