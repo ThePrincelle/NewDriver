@@ -29,6 +29,19 @@
 		AB97419627C025F90010E1E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB97419827C025F90010E1E7 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		ABCD080627D5352B00D2C32C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		AB0AFDB327C03219007DA009 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		AB0AFDBD27C03440007DA009 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,8 +134,8 @@
 				AB97416F27C00D130010E1E7 /* Localizable.strings */,
 				AB97416727BFA2C30010E1E7 /* Components */,
 				AB1E304727BCE83500E8D465 /* Views */,
-				AB0AFDC327C0387D007DA009 /* Extensions */,
 				AB61CF7B27BC0480006D1A8A /* Model */,
+				AB0AFDC327C0387D007DA009 /* Extensions */,
 				AB0AFDC027C0361E007DA009 /* Location */,
 				AB97418427C0164E0010E1E7 /* Data */,
 				AB20906827BBFA5900AC7C45 /* NewDriver.entitlements */,
@@ -188,6 +201,7 @@
 				AB20904F27BBF90D00AC7C45 /* Sources */,
 				AB20905027BBF90D00AC7C45 /* Frameworks */,
 				AB20905127BBF90D00AC7C45 /* Resources */,
+				ABCD080627D5352B00D2C32C /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
@@ -208,7 +222,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					AB20905227BBF90D00AC7C45 = {
@@ -430,10 +444,9 @@
 				INFOPLIST_FILE = NewDriver/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NewDriver;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to record your rides.";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -446,7 +459,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -466,10 +479,9 @@
 				INFOPLIST_FILE = NewDriver/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NewDriver;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to record your rides.";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -482,7 +494,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

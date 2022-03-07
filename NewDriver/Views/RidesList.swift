@@ -15,19 +15,24 @@ struct RidesList: View {
     
     var body: some View {
         NavigationView {
+            ScrollView {
             VStack {
                 Progress(rides: rides)
-                    .frame(height: 200.0).padding(.top, 25.0)
-                List(rides) { ride in
+                    .frame(height: 200.0).padding(.top, 30.0)
+                
+                Divider()
+                    .padding(.top)
+                
+                ForEach(rides) { ride in
                     NavigationLink {
                         RideDetails(ride: ride)
                     } label: {
                         RideRow(ride: ride)
+                            .padding(.top, 3.0)
                     }
-                }
-                .padding(.top, 15.0)
+                }.padding(.horizontal, 20.0)
                 NavigationLink(destination: RideLive(ride: Ride()), isActive: $showLive) {}
-            }
+            }}
             .toolbar {
                 HStack{
                     Button(action: {

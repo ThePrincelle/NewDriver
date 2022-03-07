@@ -18,19 +18,16 @@ func timeStringFor(seconds: Int) -> String
 }
 
 struct StopWatch: View {
-    @State var duration = Measurement.init(value: 1.0, unit: UnitDuration.seconds);
+    @Binding var duration: Measurement<UnitDuration>;
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        Text("\(timeStringFor(seconds: Int(duration.converted(to: UnitDuration.seconds).value)))").font(.largeTitle).onReceive(timer) { _ in
-            duration = duration + Measurement.init(value: 1.0, unit: UnitDuration.seconds)
-        }
-    }
-}
-
-struct StopWatch_Previews: PreviewProvider {
-    static var previews: some View {
-        StopWatch()
+        Text("\(timeStringFor(seconds: Int(self.duration.converted(to: UnitDuration.seconds).value)))")
+            .font(.largeTitle)
+            .onReceive(timer) { _ in
+                self.duration = self.duration + Measurement.init(value: 1.0, unit: UnitDuration.seconds)
+                //ride.addDuration(duration: Measurement.init(value: 1.0, unit: UnitDuration.seconds))
+            }
     }
 }

@@ -9,18 +9,18 @@ import Foundation
 
 class Location {
     var longitude: Double
-    var lattitude: Double
+    var latitude: Double
     var timestamp: Date
     
-    init(longitude: Double, lattitude: Double) {
+    init(longitude: Double, latitude: Double) {
         self.longitude = longitude
-        self.lattitude = lattitude
+        self.latitude = latitude
         self.timestamp = Date()
     }
     
-    init(longitude: Double, lattitude: Double, timestamp: Date) {
+    init(longitude: Double, latitude: Double, timestamp: Date) {
         self.longitude = longitude
-        self.lattitude = lattitude
+        self.latitude = latitude
         self.timestamp = timestamp
     }
 }

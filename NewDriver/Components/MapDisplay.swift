@@ -10,14 +10,14 @@ import MapKit
 import Combine
 
 struct MapDisplay: View {
+    @Binding var trace: [Location];
+    @Binding var distance: Measurement<UnitLength>;
+    
     @ObservedObject private var locationManager = LocationManager()
     @State private var region = MKCoordinateRegion.defaultRegion
     @State private var cancellable: AnyCancellable?
     @State private var history: [CLLocationCoordinate2D] = []
-    var ride: Ride;
     @State private var userTrackingMode: MapUserTrackingMode = .follow
-    
-    @State var distance = Measurement.init(value: 0.0, unit: UnitLength.kilometers)
     
     private func setCurrentLocation() {
         cancellable = locationManager.$location.sink { location in
@@ -27,35 +27,34 @@ struct MapDisplay: View {
             )
             
             if (location?.coordinate != nil) {
-                history.append(
-                    CLLocationCoordinate2D(latitude: location?.coordinate.latitude ?? 0.0, longitude: location?.coordinate.longitude ?? 0.0)
-                )
+                let newLocation = CLLocationCoordinate2D(latitude: location?.coordinate.latitude ?? 0.0, longitude: location?.coordinate.longitude ?? 0.0)
                 
-                ride.trace?.append(
+                history.append(newLocation)
+                
+                self.trace.append(
                     Location(
                         longitude: location?.coordinate.longitude ?? 0.0,
-                        lattitude: location?.coordinate.latitude ?? 0.0
+                        latitude: location?.coordinate.latitude ?? 0.0
                     )
                 )
-                
-                var previousLocation: CLLocation = CLLocation(latitude: 0.0, longitude: 0.0);
-                ride.trace?.forEach { loc in
-                    if (previousLocation.coordinate.latitude != 0.0) {
-                        let nextLocation = CLLocation(latitude: loc.lattitude, longitude: loc.longitude)
-                        let tempDistance = nextLocation.distance(from: nextLocation) / 1000
-                        distance = distance + Measurement.init(value: tempDistance, unit: UnitLength.kilometers)
-                        previousLocation = CLLocation(latitude: loc.lattitude, longitude: loc.longitude)
+                                
+                var lastLocation = Location(longitude: 0.0, latitude: 0.0)
+                self.trace.forEach { loc in
+                    if (lastLocation.longitude != 0.0) {
+                        let previousLocation = CLLocation(latitude: lastLocation.latitude, longitude: lastLocation.longitude)
+                        let nextLocation = CLLocation(latitude: loc.latitude, longitude: loc.longitude)
+                        let tempDistance = nextLocation.distance(from: previousLocation) / 1000
+                        self.distance = self.distance + Measurement.init(value: tempDistance, unit: UnitLength.kilometers)
                     }
+                    lastLocation = loc
                 }
-                
-                ride.updateDistanceWithTrace(trace: ride.trace ?? [])
             }
         }
     }
     
     var body: some View {
         VStack {
-            Text("\(ride.distance.formatted())")
+            Text("\(self.distance.formatted())")
             if locationManager.location != nil {
                 MapView(
                     region: region,
@@ -114,10 +113,4 @@ class Coordinator: NSObject, MKMapViewDelegate {
     }
     return MKOverlayRenderer()
   }
-}
-
-struct MapDisplay_Previews: PreviewProvider {
-    static var previews: some View {
-        MapDisplay(ride: Ride())
-    }
 }

@@ -28,7 +28,11 @@ struct RideRow: View {
             }
 
             Spacer()
+            
+            Image(systemName: "chevron.right")
+                .padding(.trailing, 8.0)
         }
+        .accentColor(Color.primary)
         .padding(.vertical, 3.0)
     }
 }
